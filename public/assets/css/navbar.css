@@ -1,0 +1,292 @@
+.navbar-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 50px;
+    color: var(--blanco);
+}
+/*navbar de perfil*/
+.navbar-interna {
+    background: rgba(15, 23, 42, 0.96);
+    backdrop-filter: blur(8px);
+}
+
+.nav-izquierda,
+.nav-derecha {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-home a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-izquierda a,
+.nav-derecha a,
+.nav-mobile a {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-izquierda a::after,
+.nav-derecha a::after,
+.nav-mobile a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--azul-principal);
+    transition: width 0.45s ease;
+}
+
+.nav-izquierda a:hover,
+.nav-derecha a:hover,
+.nav-mobile a:hover {color: var(--azul-principal);}
+
+.nav-izquierda a:hover::after,
+.nav-derecha a:hover::after,
+.nav-mobile a:hover::after {width: 100%;}
+
+.navbar-home .activo::after {display: none;}
+
+.nav-derecha .activo:hover {
+    background: var(--blanco);
+    color: var(--azul-principal);
+}
+
+.nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar-home .activo {
+    border: 2px solid var(--blanco);
+    padding: 10px 24px;
+}
+
+.nav-mobile {display: none;}
+
+.menu-toggle,
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: transparent;
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+    box-shadow: none;
+}
+
+.menu-toggle::after {
+    display: none;
+}
+
+.body-sesion .navbar-home,
+.body-tareas .navbar-home,
+.body-distracciones .navbar-home,
+.body-metricas .navbar-home {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    transition:
+        background 0.35s ease,
+        backdrop-filter 0.35s ease,
+        box-shadow 0.35s ease,
+        padding 0.35s ease;
+}
+
+.body-sesion .navbar-home a {
+    color: var(--texto-principal);
+}
+
+.body-sesion .navbar-home .activo {
+    border-color: var(--texto-principal);
+    color: var(--texto-principal);
+}
+
+.body-sesion .menu-toggle {
+    color: var(--texto-principal);
+    border-color: var(--texto-principal);
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.body-sesion .nav-mobile {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.body-sesion .nav-mobile a {
+    color: var(--texto-principal);
+}
+
+.body-sesion .nav-mobile .activo,
+.body-sesion .nav-mobile .btn-perfil {
+    border-color: var(--texto-principal);
+    color: var(--texto-principal);
+}
+
+.body-sesion .nav-logo img {
+    filter: brightness(0) saturate(100%) invert(9%) sepia(17%) saturate(1567%) hue-rotate(176deg) brightness(94%) contrast(94%);
+}
+
+.body-sesion .nav-derecha .activo:hover,
+.body-sesion .nav-derecha .btn-salir:hover {
+    background: var(--texto-principal);
+    border-color: var(--texto-principal);
+    color: var(--blanco) !important;
+}
+
+.body-sesion .nav-derecha .activo:hover::after,
+.body-sesion .nav-derecha .btn-salir:hover::after {
+    display: none;
+}
+
+.body-sesion .nav-mobile .btn-perfil:hover,
+.body-sesion .nav-mobile .btn-salir:hover {
+    background: var(--texto-principal);
+    border-color: var(--texto-principal);
+    color: var(--blanco) !important;
+}
+
+/*Responsive móvil y tablets*/
+@media (max-width: 900px) {
+    .navbar-home {padding: 22px 28px;}
+
+    .nav-izquierda,
+    .nav-derecha {display: none;}
+
+    .nav-logo {
+        position: static;
+        transform: none;
+    }
+
+    .nav-logo img {height: 42px;}
+
+    .menu-toggle {
+        position: fixed;
+        top: 22px;
+        right: 28px;
+        z-index: 10001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: 2px solid var(--blanco);
+        color: var(--blanco);
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .nav-mobile {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        background: rgba(15, 23, 42, 0.98);
+        z-index: 10000;
+        transition: right 0.3s ease;
+    }
+
+    .nav-mobile.activo {right: 0;}
+
+    .nav-mobile a {
+        color: var(--blanco);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .nav-mobile .activo {
+        border: 2px solid var(--blanco);
+        padding: 12px 32px;
+    }
+}
+
+/* Estado al hacer scroll */
+.body-sesion .navbar-home.navbar-scroll {
+    background: rgba(248, 250, 252, 0.92);
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+    padding: 18px 50px;
+}
+
+.body-registro .navbar-home {
+    background: #000000 !important;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.body-registro .navbar-home a {
+    color: var(--blanco) !important;
+}
+
+.body-registro .navbar-home .activo,
+.body-registro .navbar-home .btn-salir {
+    border-color: var(--blanco) !important;
+    color: var(--blanco) !important;
+}
+
+.body-registro .menu-toggle {
+    color: var(--blanco) !important;
+    border-color: var(--blanco) !important;
+}
+
+.body-registro .nav-mobile {
+    background: rgba(0, 0, 0, 0.96);
+}
+
+.body-tareas .navbar-home.navbar-scroll,
+.body-distracciones .navbar-home.navbar-scroll,
+.body-metricas .navbar-home.navbar-scroll {
+    backdrop-filter: blur(12px);
+    padding: 18px 50px;
+}
+
+.body-tareas .navbar-home.navbar-scroll {
+    background: rgba(5, 5, 5, 0.96);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.body-distracciones .navbar-home.navbar-scroll,
+.body-metricas .navbar-home.navbar-scroll {
+    background: var(--texto-principal);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+

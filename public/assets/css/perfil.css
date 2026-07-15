@@ -1,0 +1,225 @@
+.pagina-perfil {
+    min-height: 100vh;
+    background: var(--fondo);
+    padding: 103px 0 0;
+}
+
+.perfil-panel {
+    width: 100%;
+    min-height: calc(100vh - 103px);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 56px;
+}
+
+.perfil-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.avatar-placeholder {
+    width: 260px;
+    height: 320px;
+    background: var(--azul-principal);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.perfil-fecha {
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}
+
+.perfil-info h1 {
+    margin-bottom: 26px;
+    color: var(--texto-principal);
+}
+
+.perfil-bloque {
+    margin-bottom: 30px;
+}
+
+.perfil-bloque h2 {
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: var(--texto-principal);
+}
+
+.perfil-campo {
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 18px;
+}
+
+.perfil-campo span {
+    display: block;
+    font-size: 14px;
+    color: var(--texto-secundario);
+    margin-bottom: 6px;
+}
+
+.perfil-campo strong {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid var(--gris-claro);
+    color: var(--texto-principal);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-editar {
+    height: 46px;
+    padding: 0;
+}
+
+.btn-editar,
+.pagina-perfil .btn-secundario,
+.btn-guardar,
+.btn-cancelar {
+    border: 2px solid var(--azul-principal);
+    background: transparent;
+    color: var(--azul-principal);
+    padding: 11px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-editar:hover,
+.pagina-perfil .btn-secundario:hover,
+.btn-guardar:hover {
+    background: var(--azul-principal);
+    color: var(--blanco);
+}
+
+.btn-cancelar {
+    border-color: var(--texto-secundario);
+    color: var(--texto-secundario);
+}
+
+.btn-cancelar:hover {
+    background: var(--texto-secundario);
+    color: var(--blanco);
+}
+
+.btn-eliminar {
+    margin-top: 10px;
+    border: 2px solid var(--rojo-error);
+    background: transparent;
+    color: var(--rojo-error);
+    padding: 12px 28px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-eliminar:hover {
+    background: var(--rojo-error);
+    color: var(--blanco);
+}
+
+.mensaje-error,
+.mensaje-exito {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mensaje-error {
+    background: rgba(97, 0, 0, .1);
+    color: var(--rojo-error);
+}
+
+.mensaje-exito {
+    background: var(--verde-exito);
+    color: var(--texto-principal);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 20000;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    width: 90%;
+    max-width: 420px;
+    background: var(--blanco);
+    padding: 32px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+.modal-contenido h2 {
+    margin-bottom: 20px;
+    color: var(--texto-principal);
+}
+
+.modal-contenido label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--texto-secundario);
+    font-weight: 600;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--gris-claro);
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+.modal-acciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+@media (max-width: 900px) {
+    .pagina-perfil {
+        padding: 100px 20px 30px;
+    }
+
+    .perfil-panel {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+
+    .avatar-placeholder {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .perfil-campo {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-acciones {
+        flex-direction: column;
+    }
+}

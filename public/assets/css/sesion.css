@@ -1,0 +1,553 @@
+.pagina-sesion {
+    min-height: 100vh;
+    padding: 150px 8% 70px;
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 35%),
+        linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    color: var(--texto-principal);
+}
+
+.sesion-hero {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.sesion-estado {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--azul-principal);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sesion-estado.activa {
+    background: rgba(34, 197, 94, 0.13);
+    color: #15803d;
+}
+
+.sesion-hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    margin-bottom: 12px;
+}
+
+.sesion-hero p {
+    color: var(--texto-secundario);
+    font-size: 18px;
+}
+
+.sesion-card {
+    max-width: 980px;
+    margin: 0 auto 28px;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.sesion-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.sesion-card h2 {
+    margin: 0 0 18px;
+    font-size: 30px;
+}
+
+.temporizador {
+    margin: 25px 0 18px;
+    text-align: center;
+    font-size: clamp(58px, 10vw, 110px);
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: var(--azul-principal);
+}
+
+.progreso-wrap {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.progreso-wrap progress {
+    width: 100%;
+    height: 18px;
+    overflow: hidden;
+    border: none;
+}
+
+.progreso-wrap progress::-webkit-progress-bar {
+    background: #e5e7eb;
+}
+
+.progreso-wrap progress::-webkit-progress-value {
+    background: var(--azul-principal);
+}
+
+.progreso-wrap p {
+    margin-top: 8px;
+    font-weight: 800;
+    color: var(--texto-secundario);
+}
+
+.sesion-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.sesion-info-grid p {
+    margin: 0;
+    padding: 18px;
+    background: #f8fafc;
+}
+
+.sesion-info-grid strong,
+.sesion-info-grid span {
+    display: block;
+}
+
+.sesion-info-grid strong {
+    margin-bottom: 8px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+
+.sesion-info-grid span {
+    font-weight: 800;
+}
+
+.sesion-tareas {
+    margin-top: 30px;
+}
+
+.sesion-tareas ul {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+}
+
+.sesion-tareas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tarea-completada {
+    text-decoration: line-through;
+    color: var(--texto-secundario);
+}
+
+.badge-ok {
+    padding: 6px 12px;
+    background: rgba(34, 197, 94, 0.13);
+    color: #15803d;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.pagina-sesion .btn-mini,
+.pagina-sesion .btn-principal,
+.pagina-sesion .btn-secundario {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 800;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.pagina-sesion .btn-mini {
+    padding: 8px 14px;
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--azul-principal);
+}
+
+.pagina-sesion .btn-principal {
+    padding: 14px 24px;
+    background: var(--azul-principal);
+    color: var(--blanco);
+}
+
+.pagina-sesion .btn-secundario {
+    padding: 14px 24px;
+    border: 2px solid var(--azul-principal);
+    color: var(--azul-principal);
+}
+
+.pagina-sesion .btn-mini:hover,
+.pagina-sesion .btn-principal:hover,
+.pagina-sesion .btn-secundario:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.sesion-acciones {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.texto-muted {
+    color: var(--texto-secundario);
+}
+
+.sesion-vacia {
+    text-align: center;
+}
+
+.sesion-vacia p {
+    max-width: 560px;
+    margin: 0 auto 24px;
+    color: var(--texto-secundario);
+}
+
+@media (max-width: 800px) {
+    .pagina-sesion {
+        padding: 130px 22px 50px;
+    }
+
+    .sesion-card {
+        padding: 24px;
+    }
+
+    .sesion-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sesion-tareas li,
+    .sesion-acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .sesion-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.nueva-sesion-card {
+    max-width: 760px;
+}
+
+.form-sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-form label {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--texto-principal);
+}
+
+.campo-form input,
+.campo-form select {
+    width: 100%;
+    padding: 16px 18px;
+    border: 2px solid transparent;
+    background: #f8fafc;
+    color: var(--texto-principal);
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.campo-form input:focus,
+.campo-form select:focus {
+    border-color: var(--azul-principal);
+    background: var(--blanco);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-sesion button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spotify-widget {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+    border: none;
+}
+
+.musica-placeholder button {
+    border: none;
+    background: transparent;
+    color: var(--texto-principal);
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.acciones-pomodoro {
+    justify-content: center;
+}
+
+.acciones-pomodoro button {
+    cursor: pointer;
+    background: transparent;
+}
+
+/* SESIÓN ACTIVA - DISEÑO BOCETO */
+
+.sesion-activa-layout {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.sesion-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bloque-tiempo,
+.bloque-tareas-sesion,
+.sesion-card-musica {
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+}
+
+.bloque-tiempo {
+    padding: 24px;
+    text-align: center;
+}
+
+.bloque-tiempo .fase-pomodoro {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 800;
+    color: var(--texto-secundario);
+}
+
+.temporizador.compacto {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: -1px;
+    color: var(--azul-principal);
+}
+
+.bloque-pomodoro {
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.bloque-tiempo progress {
+    width: 100%;
+    height: 12px;
+}
+
+.bloque-tareas-sesion {
+    padding: 24px;
+    min-height: 230px;
+}
+
+.bloque-tareas-sesion h3 {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.bloque-tareas-sesion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bloque-tareas-sesion li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.check-link {
+    color: var(--azul-principal);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.sesion-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.sesion-card-musica {
+    min-height: 380px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sesion-card-musica h2,
+.sesion-card-musica .texto-muted,
+.sesion-card-musica .sesion-info-grid {
+    display: none;
+}
+
+.musica-placeholder {
+    flex: 1;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-weight: 800;
+}
+
+.musica-placeholder button {
+    border: none;
+    background: transparent;
+    font-size: 36px;
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+.acciones-pomodoro {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.acciones-pomodoro .btn-secundario,
+.acciones-pomodoro .btn-principal {
+    min-width: 150px;
+    text-align: center;
+}
+
+.acciones-pomodoro button {
+    cursor: pointer;
+    background: transparent;
+}
+
+@media (max-width: 900px) {
+    .sesion-activa-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.ultima-sesion-panel h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ultima-sesion-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.dato-sesion-card {
+    min-height: 95px;
+    padding: 18px 16px;
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dato-sesion-card span {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
+.dato-sesion-card strong {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+@media (max-width: 850px) {
+    .ultima-sesion-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .ultima-sesion-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-duracion,
+.card-estado,
+.card-fecha,
+.card-nombre {
+    background: rgba(100, 116, 139, 0.12);
+}
+
+
+
+.video-ambiente {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PAUSAR */
+#btn-pausar:hover {
+    background: var(--azul-principal) !important;
+    border-color: var(--azul-principal) !important;
+    color: var(--blanco) !important;
+}
+
+/* REANUDAR */
+#btn-reanudar:hover {
+    background: var(--verde-exito) !important;
+    border-color: var(--verde-exito) !important;
+    color: var(--azul-principal) !important;
+}
+
+/* FINALIZAR */
+.acciones-pomodoro .btn-principal:hover {
+    background: var(--rojo-error) !important;
+    border-color: var(--rojo-error) !important;
+    color: var(--blanco) !important;
+}
