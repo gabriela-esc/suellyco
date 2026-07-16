@@ -15,10 +15,18 @@ class Conexion
             $usuario = 'root';
             $contrasena = '';
         } else {
-            $host = 'sql205.infinityfree.com';
-            $base_datos = 'if0_42426723_suellyco';
-            $usuario = 'if0_42426723';
-            $contrasena = 'KocjgCqhuyEkT';
+            $rutaCredenciales = __DIR__ . '/credenciales.php';
+
+            if (!file_exists($rutaCredenciales)) {
+                die('Falta el archivo de configuración del servidor.');
+            }
+
+            $credenciales = require $rutaCredenciales;
+
+            $host = $credenciales['host'];
+            $base_datos = $credenciales['base_datos'];
+            $usuario = $credenciales['usuario'];
+            $contrasena = $credenciales['contrasena'];
         }
 
         try {
