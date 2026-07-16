@@ -2,4 +2,4 @@
 
 session_start();
 
-require_once "../rutas/web.php";
+require_once __DIR__ . "/../rutas/web.php";
