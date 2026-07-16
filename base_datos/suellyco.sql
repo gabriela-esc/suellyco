@@ -1,8 +1,8 @@
-create database if not exists suellyco
+/*create database if not exists suellyco
 character set utf8mb4
 collate utf8mb4_unicode_ci;
 
-use suellyco;
+use suellyco;*/
 
 create table usuarios (
     id int auto_increment PRIMARY KEY,
