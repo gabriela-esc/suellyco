@@ -7,6 +7,7 @@ use suellyco;*/
 create table usuarios (
     id int auto_increment PRIMARY KEY,
     nombre varchar(100) not null,
+    genero VARCHAR(20) NULL,
     correo varchar(150) not null unique,
     contrasena varchar(255) not null,
     fecha_creacion timestamp default current_timestamp
