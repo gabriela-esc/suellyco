@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Impide acceder directamente a carpetas internas
+RewriteRule ^(?:app|config|rutas|base_datos)(?:/|$) - [F,L]
+
+# Sirve los recursos públicos desde public/assets
+RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+# Envía la página principal y las rutas a public/index.php
+RewriteRule ^(?:index\.php)?$ public/index.php [L,QSA]
