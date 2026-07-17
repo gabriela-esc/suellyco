@@ -21,7 +21,7 @@
                         id="temporizador"
                         class="temporizador compacto"
                         data-sesion-id="<?php echo $sesion_activa["id"]; ?>"
-                        data-inicio="<?php echo $sesion_activa["fecha_inicio"]; ?>"
+                        data-inicio-unix="<?php echo $sesion_activa["fecha_inicio_unix"]; ?>"
                         data-minutos-estudio="<?php echo $sesion_activa["minutos_estudio"]; ?>"
                         data-minutos-descanso="<?php echo $sesion_activa["minutos_descanso"]; ?>"
                         data-bloques="<?php echo $sesion_activa["bloques"]; ?>"

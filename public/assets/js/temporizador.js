@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnReanudar = document.getElementById("btn-reanudar");
 
     const sesionId = temporizador.dataset.sesionId;
-    const fechaInicio = new Date(temporizador.dataset.inicio.replace(" ", "T"));
+    const fechaInicio = new Date(parseInt(temporizador.dataset.inicioUnix, 10) * 1000);
     const minutosEstudio = parseInt(temporizador.dataset.minutosEstudio);
     const minutosDescanso = parseInt(temporizador.dataset.minutosDescanso);
     const totalBloques = parseInt(temporizador.dataset.bloques);

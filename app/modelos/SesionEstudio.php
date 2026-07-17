@@ -9,9 +9,31 @@ class SesionEstudio
     $conexion = Conexion::conectar();
 
     $sql = "INSERT INTO sesiones_estudio 
-        (usuario_id, lista_id, nombre_sesion, minutos_estudio, minutos_descanso, sonido, bloques, bloque_actual, fase_actual)
-        VALUES 
-        (:usuario_id, :lista_id, :nombre_sesion, :minutos_estudio, :minutos_descanso, :sonido, :bloques, 1, 'estudio')";
+    (
+        usuario_id,
+        lista_id,
+        nombre_sesion,
+        minutos_estudio,
+        minutos_descanso,
+        sonido,
+        bloques,
+        bloque_actual,
+        fase_actual,
+        estado
+    )
+    VALUES 
+    (
+        :usuario_id,
+        :lista_id,
+        :nombre_sesion,
+        :minutos_estudio,
+        :minutos_descanso,
+        :sonido,
+        :bloques,
+        1,
+        'estudio',
+        'activa'
+    )";
 
     $stmt = $conexion->prepare($sql);
 
@@ -33,13 +55,16 @@ class SesionEstudio
     {
         $conexion = Conexion::conectar();
 
-        $sql = "SELECT se.*, lt.nombre AS nombre_lista
-                FROM sesiones_estudio se
-                LEFT JOIN listas_tareas lt ON se.lista_id = lt.id
-                WHERE se.usuario_id = :usuario_id
-                AND se.estado = 'activa'
-                ORDER BY se.fecha_inicio DESC
-                LIMIT 1";
+        $sql = "SELECT 
+            se.*,
+            UNIX_TIMESTAMP(se.fecha_inicio) AS fecha_inicio_unix,
+            lt.nombre AS nombre_lista
+        FROM sesiones_estudio se
+        LEFT JOIN listas_tareas lt ON se.lista_id = lt.id
+        WHERE se.usuario_id = :usuario_id
+        AND se.estado = 'activa'
+        ORDER BY se.fecha_inicio DESC
+        LIMIT 1";
 
         $stmt = $conexion->prepare($sql);
         $stmt->execute([

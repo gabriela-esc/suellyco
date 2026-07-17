@@ -68,13 +68,18 @@ create table sesiones_estudio (
     id int auto_increment PRIMARY KEY,
     usuario_id int not null,
     lista_id int null,
+    nombre_sesion varchar(150) null,
     estado enum('activa', 'completada', 'cancelada') default 'activa',
     minutos_estudio int not null,
     minutos_descanso int default 5,
+    bloques int not null default 1,
+    bloque_actual int not null default 1,
+    fase_actual varchar(50) not null default 'estudio',
     sonido varchar(100) default 'biblioteca',
     fecha_inicio datetime default current_timestamp,
     fecha_fin datetime null,
     segundos_totales int default 0,
+    
 
     FOREIGN KEY (usuario_id)
     references usuarios(id)
@@ -100,3 +105,16 @@ create table sesiones_tareas (
     references tareas(id)
     on delete cascade
 );
+
+
+ALTER TABLE sesiones_estudio
+ADD COLUMN 
+
+ALTER TABLE sesiones_estudio
+ADD COLUMN bloques INT NOT NULL DEFAULT 1 AFTER minutos_descanso;
+
+ALTER TABLE sesiones_estudio
+ADD COLUMN bloque_actual INT NOT NULL DEFAULT 1 AFTER bloques;
+
+ALTER TABLE sesiones_estudio
+ADD COLUMN fase_actual VARCHAR(50) NOT NULL DEFAULT 'estudio' AFTER bloque_actual;
