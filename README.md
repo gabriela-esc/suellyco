@@ -5,6 +5,12 @@ Suellyco es una aplicación web que busca ayudar a los usuarios a desarollar há
 
 A diferencia de otras herramientas web centradas exclusivamente en la productividad, Suellyco busca ofrecer una experiencia más equilibrada. Incorpora funciones como gestión de tareas y subtareas, organización de sesiones de estudio mediante la técnica Pomodoro y el control de páginas web que representen una distracción. Todo ello a través de una interfaz de diseño minimalista cuyo objetivo es transmitir tranquilidad y favorecer una experiencia más agradable y menos estresante. 
 
+## Demo online
+
+La aplicación está disponible en: https://suellyco.infinityfreeapp.com
+
+Desde ahí podrás registrarte, iniciar sesión y utilizar las funcionalidades directamente desde tu navegador.
+
 ## Capturas
 A continuación se incluyen capturas de las principales pantallas de la aplicación.
 
@@ -41,8 +47,80 @@ A continuación se incluyen capturas de las principales pantallas de la aplicaci
 - Visual Studio Code: Entorno de desarrollo.
 - Apache JMeter: Herramienta para realizar ensayos de carga y rendimiento sobre la aplicación. 
 
-## Instalación
+## Instalación local
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/gabriela-esc/suellyco.git
+### Requisitos
+
+Deberás tener instalado en tu dispositivo local los siguientes programas: 
+- XAMPP
+- Git
+- Un navegador web
+
+### 1. Clonar el repositorio
+
+Abre una terminal y clona el proyecto dentro de la carpeta `htdocs` de XAMPP:
+
+```bash
+cd C:\xampp\htdocs
+git clone https://github.com/gabriela-esc/suellyco.git
+```
+
+### 2. Iniciar los servicios
+
+Abre el panel de control de XAMPP e inicia:
+
+- Apache
+- MySQL
+
+### 3. Crear la base de datos
+
+Abre phpMyAdmin en:
+
+```text
+http://localhost/phpmyadmin
+```
+
+Crea una base de datos llamada:
+
+```text
+suellyco
+```
+
+### 4. Importar la estructura de la base de datos
+
+Selecciona la base de datos `suellyco`, abre la pestaña **Importar** y selecciona el archivo:
+
+```text
+base_datos/suellyco.sql
+```
+
+Después, confirma la importación.
+
+### 5. Comprobar la conexión
+
+La configuración local se encuentra en:
+
+```text
+config/conexion.php
+```
+
+Por defecto, el proyecto utiliza esta configuración para XAMPP:
+
+```php
+$host = 'localhost';
+$base_datos = 'suellyco';
+$usuario = 'root';
+$contrasena = '';
+```
+
+En una instalación estándar de XAMPP no debería ser necesario modificarla.
+
+### 6. Abrir la aplicación
+
+Accede desde el navegador a:
+
+```text
+http://localhost/suellyco/
+```
+
+Desde ahí podrás registrarte, iniciar sesión y utilizar la aplicación.
