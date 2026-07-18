@@ -44,7 +44,8 @@ A continuación se incluyen capturas de las principales pantallas de la aplicaci
 
 ## Funcionalidades
 
-- Creación de tareas y subtareas: Permite crear listas de tareas generales y dividirlas en subtareas más pequeñas y ejecutables. La creación de este apartado está basada en la técnica **Work Breakdown Structure (WBS)** que consiste en descomponer una tarea grande o general en tareas más pequeñas.
+### Creación de tareas y subtareas: 
+Permite crear listas de tareas generales y dividirlas en subtareas más pequeñas y ejecutables. La creación de este apartado está basada en la técnica **Work Breakdown Structure (WBS)** que consiste en descomponer una tarea grande o general en tareas más pequeñas.
 
 Los usuarios pueden:
 - Crear listas de tareas.
@@ -52,8 +53,8 @@ Los usuarios pueden:
 - Marcar subtareas como completadas.
 - Eliminar tareas y listas.
 
-  
-- Sesión de Estudio: Esta es la página principal del proyecto. Su objetivo es permitirle al usuario planificar periodos de concentración organizados en bloques de estudio y descanso, inspirados en la técnica Pomodoro. 
+### Sesión de Estudio: 
+Esta es la página principal del proyecto. Su objetivo es permitirle al usuario planificar periodos de concentración organizados en bloques de estudio y descanso, inspirados en la técnica Pomodoro. 
 
 Cada sesión puede incluir:
 - Nombre personalizado.
@@ -64,7 +65,8 @@ Cada sesión puede incluir:
 - Música o sonidos ambientales.
 - Controles para pausar, reanudar y finalizar la sesión. 
   
-- Distracciones: Permite registrar y gestionar páginas web que el usuario considera que le distraen.
+### Distracciones: 
+Permite registrar y gestionar páginas web que el usuario considera que le distraen.
 
   Actualmente es posible:
 - Añadir el nombre y la URL de un sitio.
@@ -72,8 +74,9 @@ Cada sesión puede incluir:
 - Eliminar sitios de la lista.
 
 > El bloqueo real de páginas web todavía se encuentra en desarrollo. Para implementarlo sería necesaria una extensión del navegador o una solución equivalente.
-  
-- Métricas: Muestra información sobre el progreso del usuario, incluyendo:
+
+### Métricas: 
+Muestra información sobre el progreso del usuario, incluyendo:
 
 - Tiempo estudiado durante el día, la semana, el mes y en total.
 - Número de sesiones realizadas.
@@ -82,8 +85,9 @@ Cada sesión puede incluir:
 - Historial de sesiones y su duración.
 
 > El objetivo de esta sesión que los usuarios sobreexigentes o perfeccionistas que no suelen ver progreso al procrastinar puedan ver el más mínimo progreso, añadiendo motivación.
-  
-- Registro/Inicio de Sesión: Permite el registro y el inicio de sesión para poder acceder a todas las funcionalidades de la aplicación. El registro es necesario para poder guardar el progreso y hacer uso de varias funcionalidades.  
+
+### Registro/Inicio de Sesión: 
+Permite el registro y el inicio de sesión para poder acceder a todas las funcionalidades de la aplicación. El registro es necesario para poder guardar el progreso y hacer uso de varias funcionalidades.  
 
 ## Tecnologías utilizadas
 - PHP: Desarrollo de la lógica e implementación del patrón Modelo-Vista-Controlador (MVC).
