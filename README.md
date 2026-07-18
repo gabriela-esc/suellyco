@@ -16,31 +16,29 @@ Desde ahí podrás registrarte, iniciar sesión y utilizar las funcionalidades d
 ## Capturas
 A continuación se incluyen capturas de las principales pantallas de la aplicación.
 
-###Página de inicio
+### Página de inicio
 
 <img width="1298" height="682" alt="Captura de pantalla 2026-06-10 183556" src="https://github.com/user-attachments/assets/25e83c1d-3311-48e7-87b2-4e54e9fd06c5" />
 
-###Gestión de tareas
+### Gestión de tareas
 
 <img width="1298" height="682" alt="Captura de pantalla 2026-06-10 183743" src="https://github.com/user-attachments/assets/589e8380-926f-4c4f-bc93-fc9db0b08752" />
 
-###Sesión de estudio
+### Distracciones
 
 <img width="1296" height="656" alt="Captura de pantalla 2026-06-10 183830" src="https://github.com/user-attachments/assets/62f0a4e0-e844-472e-ba9d-1347948ef749" />
 
-###Métricas y perfil
+### Sesión de estudio
 
 <img width="1291" height="676" alt="Captura de pantalla 2026-06-10 192207" src="https://github.com/user-attachments/assets/d7d1393b-c5fa-42d7-b0d3-fa563fe0a7f3" />
 
-###Métricas y perfil
+### Métricas
 
 <img width="1293" height="650" alt="Captura de pantalla 2026-06-10 183922" src="https://github.com/user-attachments/assets/2e583968-74fa-463a-8320-e6758bdccb21" />
 
-###Métricas y perfil
+### Resgistro e inicio de sesión
 
 <img width="1297" height="679" alt="Captura de pantalla 2026-06-10 193536" src="https://github.com/user-attachments/assets/a5cef91d-6265-4091-b63f-f2d64cdca08e" />
-
-###Métricas y perfil
 
 <img width="1298" height="678" alt="Captura de pantalla 2026-06-10 183952" src="https://github.com/user-attachments/assets/6acacb07-81ee-4145-9d09-31ec74910657" />
 
