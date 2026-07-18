@@ -49,16 +49,10 @@ A continuación se incluyen capturas de las principales pantallas de la aplicaci
 
 ## Instalación local
 
-### Requisitos
-
-Deberás tener instalado en tu dispositivo local los siguientes programas: 
-- XAMPP
-- Git
-- Un navegador web
+Antes de empezar la instalación y para la correcta ejecución de la aplicación en tu ordenador local, deberás tener instalado en tu dispositivo local los siguientes programas: XAMPP y Git.
 
 ### 1. Clonar el repositorio
-
-Abre una terminal y clona el proyecto dentro de la carpeta `htdocs` de XAMPP:
+Abre una terminal y clona el proyecto dentro de la carpeta 'htdocs' de XAMPP:
 
 ```bash
 cd C:\xampp\htdocs
@@ -66,14 +60,9 @@ git clone https://github.com/gabriela-esc/suellyco.git
 ```
 
 ### 2. Iniciar los servicios
-
-Abre el panel de control de XAMPP e inicia:
-
-- Apache
-- MySQL
+Abre el panel de control de XAMPP e inicia Apache y MySQL
 
 ### 3. Crear la base de datos
-
 Abre phpMyAdmin en:
 
 ```text
